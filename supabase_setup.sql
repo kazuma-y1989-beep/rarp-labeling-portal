@@ -119,7 +119,7 @@ using (
 insert into public.profiles (id, researcher_name, role)
 select id, '管理者', 'admin'
 from auth.users
-where lower(email) = lower('kazuma-y1989@hotmail.com')
+where lower(email) = lower('ADMIN_EMAIL@example.com')
 on conflict (id) do update
 set researcher_name = excluded.researcher_name,
     role = excluded.role;
